@@ -65,10 +65,50 @@ public class Main {
             }
         }
     }
+
+    public static void extraTask() {
+        Scanner scanner = new Scanner(System.in);
+        String firstName = "";
+        String lastName = "";
+        int dateOfBirth = 0;
+        while (true) {
+            System.out.printf("Введите цифру для вызова пункта меню: %n1. Ввести имя. %n2. Ввести фамилию. %n3. Ввести год рождения. %n4. Вывести информацию. %n0. Выход.%n");
+            int x = scanner.nextInt();
+            switch (x) {
+                case 1:
+                    Scanner firstCase = new Scanner(System.in);
+                    System.out.println("Введите имя: ");
+                    String caseName = firstCase.nextLine();
+                    firstName = caseName;
+                    break;
+                case 2:
+                    Scanner secondCase = new Scanner(System.in);
+                    System.out.println("Введите фамилию: ");
+                    String caseLastName = secondCase.nextLine();
+                    lastName = caseLastName;
+                    break;
+                case 3:
+                    Scanner thirdCase = new Scanner(System.in);
+                    System.out.println("Введите год рождения: ");
+                    int caseDateOfBirth = thirdCase.nextInt();
+                    dateOfBirth = caseDateOfBirth;
+                    break;
+                case 4:
+                    System.out.println("Имя: " + firstName) ;
+                    System.out.println("Фамилия: " +lastName);
+                    System.out.println("Год рождения: " + dateOfBirth);
+                    break;
+                case 0:
+                    return;
+                default:
+                    break;
+            }
+        }
+    }
     public static void main(String[] args) {
         updateLoop30();
         updateLoop36();
         updateStatements();
-        remoteController();
+        extraTask();
     }
 }
